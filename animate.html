@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+$("#t").click(function(){
+$("#t1").slideDown(6000);
+
+});
+ 
+$("button").click(function(){
+$("#t").slideDown(2000).slideUp(2000).css("color", "red");
+
+$("#t1").stop();
+});
+$("#t2").click(function(){
+
+$("#t1").hide("slow", function(){alert("I am hiding 'I am sliding down'")});
+});
+    });
+
+
+</script>
+<style>
+#t, #t1
+{
+padding: 5px;
+background-color: green;
+border: solid 2px;
+text-align: center
+
+}
+
+#t1
+{
+padding: 50px;
+display: none;
+}
+</style>
+</head>
+<body bgcolor="pink">
+
+<button > Click Me</button>
+<div id="t">Hi World</div>
+<div id="t1" > I am sliding down</div>
+
+<button id="t2" > Click Me</button>
+
+</body>
+</html>
